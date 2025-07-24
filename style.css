@@ -1,38 +1,45 @@
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: url('background.jpg') center/cover no-repeat fixed;
+  color: #e0f7fa;
 }
+
 .desktop {
-  background: url('office-monitor.jpg') center/cover no-repeat;
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
+
 .taskbar {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 40px;
-  background: rgba(30, 30, 30, 0.8);
-  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  color: #e0f7fa;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  font-weight: bold;
 }
+
 .start-button {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 255, 255, 0.2);
   padding: 4px 10px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
-.time {
-  font-size: 14px;
+.start-button:hover {
+  background: rgba(0, 255, 255, 0.4);
 }
+
 .window {
   position: absolute;
   top: 50%;
@@ -41,93 +48,101 @@ body, html {
   width: 90%;
   max-width: 1200px;
   height: 80%;
-  background: #f0f0f0;
+  background: rgba(0, 20, 40, 0.85);
   border-radius: 8px 8px 0 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0,255,255,0.3);
   display: flex;
   flex-direction: column;
+  color: #e0f7fa;
 }
+
 .window-titlebar {
-  background: linear-gradient(90deg, #00b4d8, #0077b6);
-  animation: glow 3s infinite alternate;
-  color: white;
+  background: linear-gradient(90deg, #00e5ff, #00bcd4);
+  color: black;
   padding: 8px 12px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #004f8d;
+  border-bottom: 2px solid #00acc1;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
 }
-@keyframes glow {
-  from { box-shadow: 0 0 5px #00b4d8; }
-  to { box-shadow: 0 0 15px #0077b6; }
-}
+
 .window-content {
   padding: 10px;
   overflow: auto;
   flex: 1;
 }
+
 .scoreboard {
-  background: linear-gradient(135deg, #00b4d8, #90e0ef);
+  background: linear-gradient(135deg, #00bcd4, #26c6da);
   border-radius: 12px;
   font-size: 20px;
-  color: white;
+  color: #000;
   padding: 8px 16px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
 }
+
 .game-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   height: auto;
-  animation: fadeIn 0.6s ease-out;
 }
+
 .inbox, .email-detail {
-  background: #fff;
+  background: rgba(255,255,255,0.1);
   border-radius: 12px;
   padding: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
   overflow: auto;
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
 }
+
 .inbox h3, .email-detail h3 {
   margin: 0 0 10px;
   font-size: 20px;
-  color: #00bcd4;
+  color: #80deea;
   text-align: center;
-  border-bottom: 2px solid #00bcd4;
+  border-bottom: 2px solid #26c6da;
   padding-bottom: 5px;
 }
+
 ul#emailList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .email-item {
-  background: #f9f9f9;
+  background: rgba(255,255,255,0.05);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255,255,255,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #e0f7fa;
 }
 .email-item:hover {
-  background: #e3f2fd;
+  background: rgba(0,255,255,0.1);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,255,255,0.3);
   cursor: pointer;
 }
+
 .email-sender {
   font-weight: bold;
   font-size: 16px;
-  color: #0077b6;
+  color: #4dd0e1;
 }
-.email-subject { font-size: 14px; color: #555; margin-top: 4px; }
-.email-preview { color: #5f6368; font-size: 13px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.email-subject { font-size: 14px; color: #b2ebf2; margin-top: 4px; }
+.email-preview { color: #80deea; font-size: 13px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 #actions button {
   padding: 8px 14px;
   border: none;
@@ -135,9 +150,13 @@ ul#emailList {
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: bold;
 }
-#safeBtn { background: #4CAF50; color: #fff; }
-#scamBtn { background: #E53935; color: #fff; }
+#safeBtn { background: #26a69a; color: #fff; }
+#scamBtn { background: #e53935; color: #fff; }
+#safeBtn:hover { background: #2bbbad; }
+#scamBtn:hover { background: #f44336; }
+
 #feedback {
   display: flex;
   justify-content: center;
@@ -146,14 +165,16 @@ ul#emailList {
   font-size: 18px;
   font-weight: bold;
 }
+
 .summary {
-  background: #fff;
+  background: rgba(255,255,255,0.1);
   padding: 15px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255,255,255,0.2);
 }
+
 button {
-  background: #0078d7;
+  background: #00bcd4;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -161,42 +182,42 @@ button {
   margin: 4px;
   font-size: 14px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
-button:hover { background: #005a9e; }
-.difficulty-selector {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.difficulty-selector input[type="radio"] { display: none; }
+button:hover { background: #26c6da; }
+
 .difficulty-selector label {
   padding: 8px 14px;
-  background: #f0f0f0;
-  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  color: #e0f7fa;
 }
 .difficulty-selector input[type="radio"]:checked + label {
-  background: #0078d7;
-  color: #fff;
-  border-color: #005a9e;
+  background: #26c6da;
+  color: #000;
+  border-color: #00acc1;
 }
+
 .about-section {
   margin-top: 40px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background: #ffffff;
+  background: rgba(0,0,0,0.5);
   padding: 20px 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
   text-align: center;
+  color: #e0f7fa;
 }
+
 .sender-tooltip {
   text-decoration: underline dotted;
   cursor: help;
-  color: #0078d7;
+  color: #4dd0e1;
   font-weight: bold;
 }
-.sender-tooltip:hover { color: #005a9e; }
+.sender-tooltip:hover { color: #26c6da; }
