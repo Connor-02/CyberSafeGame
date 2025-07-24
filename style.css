@@ -42,8 +42,8 @@ body, html {
   position: absolute;
 
   
-  top: 37.8%;
-  left: 48.7%;
+  top: 37%;
+  left: 49.08%;
 
   /* nudge it to align with the white screen */
   transform: translate(calc(-50% - 20px), calc(-50% - 10px));
