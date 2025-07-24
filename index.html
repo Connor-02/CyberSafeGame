@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Security Training Game</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Security Training Game</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="desktop">
-    <div class="taskbar" role="banner">
-      <div class="start-button" tabindex="0">Start</div>
-      <div class="time" aria-label="Current Time">🕒 9:42 AM</div>
+<div class="desktop">
+  <div class="taskbar">
+    <div class="start-button">Start</div>
+    <div class="time">🕒 9:42 AM</div>
+  </div>
+  <div class="window" id="emailWindow">
+    <div class="window-titlebar" id="titleBar">
+      <span class="window-title">📧 Company Mail</span>
+      <span class="window-controls">🗕 🗖 ✕</span>
     </div>
-
-    <div class="window" id="emailWindow" role="main">
-      <div class="window-titlebar" id="titleBar">
-        <span class="window-title">📧 Company Mail</span>
-        <span class="window-controls" aria-hidden="true">🗕 🗖 ✕</span>
-      </div>
-      <div class="window-content">
-
-        <div class="scoreboard" aria-live="polite">Score: <span id="scoreValue">0</span></div>
-
-        <div class="level-select">
-          <div class="difficulty-selector">
-            <input type="radio" id="easy" name="difficulty" value="easy" checked>
-            <label for="easy">Easy</label>
-
-            <input type="radio" id="medium" name="difficulty" value="medium">
-            <label for="medium">Medium</label>
-
-            <input type="radio" id="hard" name="difficulty" value="hard">
-            <label for="hard">Hard</label>
-        
-            <button id="startGameBtn">Start Game</button>
-          </div>
-
-          <div class="about-section">
+    <div class="window-content">
+      <div class="scoreboard">Score: <span id="scoreValue">0</span></div>
+      <div class="level-select">
+        <div class="difficulty-selector">
+          <input type="radio" id="easy" name="difficulty" value="easy" checked>
+          <label for="easy">Easy</label>
+          <input type="radio" id="medium" name="difficulty" value="medium">
+          <label for="medium">Medium</label>
+          <input type="radio" id="hard" name="difficulty" value="hard">
+          <label for="hard">Hard</label>
+          <button id="startGameBtn">Start Game</button>
+        </div>
+        <div class="about-section">
             <h2>📌 About This Game</h2>
             <p>
               Welcome to the Email Security Training Game!<br><br>
@@ -47,38 +40,35 @@
             </p>
           </div>
         </div>
-
-        <div class="game-container" style="display:none;">
-          <div class="inbox" aria-label="Inbox Section">
-            <h3>Inbox</h3>
-            <ul id="emailList"></ul>
-          </div>
-          <div class="email-detail" aria-label="Email Detail Section">
-            <h3>Email Content</h3>
-            <div id="emailContent">Select an email to read.</div>
-            <div id="actions" style="display:none;">
-              <button id="safeBtn">✅ Safe</button>
-              <button id="scamBtn">🚩 Scam</button>
-            </div>
-            <div id="feedback"></div>
-            <div id="reason" style="margin-top:6px; font-size:14px; color:#555;"></div>
-          </div>
+      <div class="game-container" style="display:none;">
+        <div class="inbox">
+          <h3>Inbox</h3>
+          <ul id="emailList"></ul>
         </div>
-
-        <div class="summary" style="display:none;">
-          <h2>Level Summary</h2>
-          <p id="finalScore"></p>
-          <ul id="tips">
-            <li>✅ Check sender details carefully.</li>
-            <li>✅ Hover links before clicking.</li>
-            <li>✅ Watch for urgent language.</li>
-            <li>✅ Never give out sensitive info via email.</li>
-          </ul>
-          <button id="playAgainBtn">Play Again</button>
+        <div class="email-detail">
+          <h3>Email Content</h3>
+          <div id="emailContent">Select an email to read.</div>
+          <div id="actions" style="display:none;">
+            <button id="safeBtn">✅ Safe</button>
+            <button id="scamBtn">🚩 Scam</button>
+          </div>
+          <div id="feedback"></div>
+          <div id="reason"></div>
         </div>
+      </div>
+      <div class="summary" style="display:none;">
+        <h2>Level Summary</h2>
+        <p id="finalScore"></p>
+        <ul id="tips">
+          <li>✅ Check sender details carefully.</li>
+          <li>✅ Hover links before clicking.</li>
+          <li>✅ Watch for urgent language.</li>
+        </ul>
+        <button id="playAgainBtn">Play Again</button>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
