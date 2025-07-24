@@ -40,22 +40,25 @@ body, html {
 /* 🔥 Updated window styling */
 .window {
   position: absolute;
-  /* start from center */
+
+  /* Center first */
   top: 50%;
   left: 50%;
-  /* nudge it to align with the white screen */
-  transform: translate(calc(-50% - 20px), calc(-50% - 10px));
-  
-  /* adjust size to just cover the white screen area */
-  width: 1000px;   /* try 1000px wide to match the inner screen */
-  height: 560px;   /* try 560px tall to match the inner screen */
-  
+
+  /* Nudge to perfectly overlay the monitor’s white screen */
+  transform: translate(calc(-50% - 10px), calc(-50% - 20px));
+
+  /* Sizing to fit the visible monitor screen */
+  width: 880px;
+  height: 500px;
+
   background: #f0f0f0;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
 }
+
 
 
 .window-titlebar {
