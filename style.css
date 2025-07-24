@@ -57,14 +57,14 @@ body, html {
 }
 
 .window-titlebar {
-  background: linear-gradient(90deg, #1de9b6, #1dc4e9);
-  color: #000;
+  background: linear-gradient(90deg, #444444, #222222);
+  color: #ffffff;
   padding: 8px 12px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #0d7377;
+  border-bottom: 2px solid #666666;
 }
 
 .window-content {
@@ -74,15 +74,16 @@ body, html {
 }
 
 .scoreboard {
-  background: linear-gradient(135deg, #00bcd4, #26c6da);
+  background: linear-gradient(135deg, #333333, #555555);
   border-radius: 12px;
   font-size: 20px;
-  color: #000;
+  color: #ffffff;
   padding: 8px 16px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
 }
+
 
 .game-container {
   display: flex;
@@ -139,7 +140,12 @@ ul#emailList {
   color: #4dd0e1;
 }
 
-.email-subject { font-size: 14px; color: #b2ebf2; margin-top: 4px; }
+.email-subject {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
 .email-preview { color: #80deea; font-size: 13px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 #actions button {
