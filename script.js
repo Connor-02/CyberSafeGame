@@ -1,147 +1,146 @@
 let emails = [
   /* ✅ EASY MODE */
   {
-  sender: "no-reply@apex-solutions.com",
-  actualDomain: "no-reply@apex-solutions-alerts.com",
-  subject: "Action Needed: Update Security Preferences",
-  body: "We’ve improved our security settings. Please update your preferences here: https://apex-solutions-alerts.com/security-update",
-  isScam: true,
-  difficulty: "easy",
-  reason: "The email appears official, but the domain apex-solutions-alerts.com is not the real company domain."
-},
-{
-  sender: "events@apex-solutions.com",
-  actualDomain: "events@apex-solutions.com",
-  subject: "New Holiday Schedule Released",
-  body: "The 2025 holiday schedule is attached as a PDF for your reference.",
-  isScam: false,
-  difficulty: "easy",
-  reason: "A legitimate internal announcement with no suspicious requests."
-},
-{
-  sender: "it-support@apex-solutions.com",
-  actualDomain: "it-support@apexsolutions.com", // missing hyphen
-  subject: "Password Rotation Notice",
-  body: "Your password is due for rotation. Reset here: https://apexsolutions.com-passwordreset.info",
-  isScam: true,
-  difficulty: "easy",
-  reason: "The domain is missing the hyphen and the reset link goes to a non‑company domain."
-},
-{
-  sender: "newsletter@apex-solutions.com",
-  actualDomain: "newsletter@apex-solutions.com",
-  subject: "Monthly Updates",
-  body: "Catch up on company news and upcoming projects. No action required.",
-  isScam: false,
-  difficulty: "easy",
-  reason: "Internal newsletter from a verified domain."
-},
-{
-  sender: "rewards@apex-solutions.com",
-  actualDomain: "rewards@solutions-apex.com",
-  subject: "Congratulations! You’ve Earned a Gift",
-  body: "Claim your reward here: https://solutions-apex.com/redeem",
-  isScam: true,
-  difficulty: "easy",
-  reason: "The root domain is solutions-apex.com, not apex-solutions.com."
-},
+    sender: "no-reply@apex-solutions.com",
+    actualDomain: "no-reply@apex-solutions-alerts.com",
+    subject: "Action Needed: Update Security Preferences",
+    body: "We’ve improved our security settings. Please update your preferences here: https://apex-solutions-alerts.com/security-update",
+    isScam: true,
+    difficulty: "easy",
+    reason: "The email appears official, but the domain apex-solutions-alerts.com is not the real company domain."
+  },
+  {
+    sender: "events@apex-solutions.com",
+    actualDomain: "events@apex-solutions.com",
+    subject: "New Holiday Schedule Released",
+    body: "The 2025 holiday schedule is attached as a PDF for your reference.",
+    isScam: false,
+    difficulty: "easy",
+    reason: "A legitimate internal announcement with no suspicious requests."
+  },
+  {
+    sender: "it-support@apex-solutions.com",
+    actualDomain: "it-support@apexsolutions.com",
+    subject: "Password Rotation Notice",
+    body: "Your password is due for rotation. Reset here: https://apexsolutions.com-passwordreset.info",
+    isScam: true,
+    difficulty: "easy",
+    reason: "The domain is missing the hyphen and the reset link goes to a non‑company domain."
+  },
+  {
+    sender: "newsletter@apex-solutions.com",
+    actualDomain: "newsletter@apex-solutions.com",
+    subject: "Monthly Updates",
+    body: "Catch up on company news and upcoming projects. No action required.",
+    isScam: false,
+    difficulty: "easy",
+    reason: "Internal newsletter from a verified domain."
+  },
+  {
+    sender: "rewards@apex-solutions.com",
+    actualDomain: "rewards@solutions-apex.com",
+    subject: "Congratulations! You’ve Earned a Gift",
+    body: "Claim your reward here: https://solutions-apex.com/redeem",
+    isScam: true,
+    difficulty: "easy",
+    reason: "The root domain is solutions-apex.com, not apex-solutions.com."
+  },
 
   /* 🟡 MEDIUM MODE */
   {
-  sender: "hr-portal@apex-solutions.com",
-  actualDomain: "hr-portal@apex-solutions.com",
-  subject: "Update Your Payroll Information",
-  body: "Our records show your payroll details need verification. Submit them via this secure form: https://apex-solutions.com.payroll-verify.net",
-  isScam: true,
-  difficulty: "medium",
-  reason: "The link pretends to be part of the company but is actually under payroll-verify.net."
-},
-{
-  sender: "security@apex-solutions.com",
-  actualDomain: "security@apex-solutions.net",
-  subject: "Login Attempt Detected",
-  body: "We noticed a login from an unfamiliar location. Review activity: https://apex-solutions.net-loginreview.com",
-  isScam: true,
-  difficulty: "medium",
-  reason: "The sender domain ends in .net and the URL includes a deceptive extra dash and subdomain."
-},
-{
-  sender: "it-maintenance@apex-solutions.com",
-  actualDomain: "it-maintenance@apex-solutions-support.com",
-  subject: "Service Window Reminder",
-  body: "A short downtime is scheduled. Please confirm you have no pending changes: https://apex-solutions-support.com/maintenance",
-  isScam: true,
-  difficulty: "medium",
-  reason: "The email looks plausible but uses a lookalike support domain."
-},
-{
-  sender: "benefits@apex-solutions.com",
-  actualDomain: "benefits@apex-solutions.com",
-  subject: "New Insurance Options Available",
-  body: "See the updated plan details: https://apex-solutions.com/benefits/2025",
-  isScam: false,
-  difficulty: "medium",
-  reason: "Legitimate HR email from the correct domain."
-},
-{
-  sender: "ceo-office@apex-solutions.com",
-  actualDomain: "ceo-office@apex-solutions.com.mx",
-  subject: "Updated Board Meeting Notes",
-  body: "See attached document marked 'Confidential'.",
-  isScam: true,
-  difficulty: "medium",
-  reason: "Domain ends with .com.mx which is not the company’s legitimate domain."
-},
-
+    sender: "hr-portal@apex-solutions.com",
+    actualDomain: "hr-portal@apex-solutions.com",
+    subject: "Update Your Payroll Information",
+    body: "Our records show your payroll details need verification. Submit them via this secure form: https://apex-solutions.com.payroll-verify.net",
+    isScam: true,
+    difficulty: "medium",
+    reason: "The link pretends to be part of the company but is actually under payroll-verify.net."
+  },
+  {
+    sender: "internal-survey@apex-solutions.com",
+    actualDomain: "internal-survey@apex-solutions.com",
+    subject: "Quarterly Engagement Survey",
+    body: "We value your input. Complete the official survey here: https://apex-solutions.com/hr/survey2025",
+    isScam: false,
+    difficulty: "medium",
+    reason: "Legitimate internal survey from the correct domain with a valid HTTPS link."
+  },
+  {
+    sender: "payroll@apex-solutions.com",
+    actualDomain: "payroll@apex-payments.com",
+    subject: "Bank Details Confirmation",
+    body: "Please reply with your account number and BSB to confirm payment.",
+    isScam: true,
+    difficulty: "medium",
+    reason: "Requests sensitive info directly in the reply, which a legitimate payroll team would never do."
+  },
+  {
+    sender: "ceo.office@apex-solutions.com",
+    actualDomain: "ceo.office@apex-solutions-support.com",
+    subject: "Immediate Action Required – Wire Transfer",
+    body: "We’re closing a deal. I need you to process a wire transfer in the next hour. Reply when ready.",
+    isScam: true,
+    difficulty: "medium",
+    reason: "Uses urgency and authority impersonation. No link is present but still a scam."
+  },
+  {
+    sender: "benefits@apex-solutions.com",
+    actualDomain: "benefits@apex-solutions.com",
+    subject: "New Insurance Options Available",
+    body: "See the updated plan details: https://apex-solutions.com/benefits/2025",
+    isScam: false,
+    difficulty: "medium",
+    reason: "Legitimate HR email from the correct domain."
+  },
 
   /* 🔴 HARD MODE */
   {
-  sender: "finance@apex-solutions.com",
-  actualDomain: "finance@аpex-solutions.com", // Cyrillic a
-  subject: "Q2 Reconciliation Required",
-  body: "Our auditors need confirmation. Upload documents securely: https://аpex-solutions.com.auditing-portal.net",
-  isScam: true,
-  difficulty: "hard",
-  reason: "Uses a Cyrillic 'a' and a misleading secure upload link."
-},
-{
-  sender: "support@apex-solutions.com",
-  actualDomain: "support@apex-solutions.com.verify-safe.cn",
-  subject: "Mandatory MFA Enrollment",
-  body: "Enroll for MFA here: https://verify-safe.cn/mfa",
-  isScam: true,
-  difficulty: "hard",
-  reason: "Root domain is verify-safe.cn, despite looking like apex-solutions at first glance."
-},
-{
-  sender: "accounts@apex-solutions.com",
-  actualDomain: "accounts@apex-s0lutions.com", // zero instead of o
-  subject: "Payment Confirmation Needed",
-  body: "Confirm your account: https://apex-s0lutions.com.billing-auth.net",
-  isScam: true,
-  difficulty: "hard",
-  reason: "The domain uses a zero instead of an o, and the link routes to billing-auth.net."
-},
-{
-  sender: "legal@apex-solutions.com",
-  actualDomain: "legal@apex-solutions.com",
-  subject: "Required Compliance Update",
-  body: "Submit your signed NDA and driver’s license scan to expedite processing.",
-  isScam: true,
-  difficulty: "hard",
-  reason: "Legitimate-looking domain but an unrealistic request for sensitive ID."
-},
-{
-  sender: "team-updates@apex-solutions.com",
-  actualDomain: "team-updates@apex-solutions.com",
-  subject: "Project Group Reassignment",
-  body: "Your assigned project group changes next quarter. No reply needed.",
-  isScam: false,
-  difficulty: "hard",
-  reason: "Real internal update with no suspicious elements."
-}
-
+    sender: "finance@apex-solutions.com",
+    actualDomain: "finance@аpex-solutions.com",
+    subject: "Q2 Reconciliation Required",
+    body: "Our auditors need confirmation. Upload documents securely: https://аpex-solutions.com.auditing-portal.net",
+    isScam: true,
+    difficulty: "hard",
+    reason: "Uses a Cyrillic 'a' and a misleading secure upload link."
+  },
+  {
+    sender: "legal@apex-solutions.com",
+    actualDomain: "legal@apex-solutions.com",
+    subject: "Updated Contract Template",
+    body: "Download the updated template: https://apex-solutions.com/resources/contracts",
+    isScam: false,
+    difficulty: "hard",
+    reason: "Legitimate internal resource link from the correct domain."
+  },
+  {
+    sender: "audit-team@apex-solutions.com",
+    actualDomain: "audit-team@apex-solutions.info",
+    subject: "Important Financial Records",
+    body: "See attached financial_report.xlsm and enable macros to view details.",
+    isScam: true,
+    difficulty: "hard",
+    reason: "Attachment requires enabling macros, which is a common malware tactic."
+  },
+  {
+    sender: "hr@apex-solutlons.com",
+    actualDomain: "hr@apex-solutlons.com",
+    subject: "Your Annual Leave Request",
+    body: "We need your bank card details to process leave payments. Reply with your card number.",
+    isScam: true,
+    difficulty: "hard",
+    reason: "Domain uses a lowercase L instead of i, and requests card details in reply."
+  },
+  {
+    sender: "support@apex-solutions.com",
+    actualDomain: "support@apex-solutions.com.secure-login-check.net",
+    subject: "Security Portal Update",
+    body: "Click here to confirm: https://apex-solutions.com.secure-login-check.net/confirm",
+    isScam: true,
+    difficulty: "hard",
+    reason: "Link visually appears safe but actually goes to secure-login-check.net."
+  }
 ];
+
 
 
 
