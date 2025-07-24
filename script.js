@@ -224,16 +224,23 @@ function openEmail(index) {
   feedbackEl.textContent = '';
   reasonEl.textContent = ''; // ✅ clear reason each time a new email is opened
 
+  // ✅ Re‑enable buttons for this new email
+  document.getElementById('safeBtn').disabled = false;
+  document.getElementById('scamBtn').disabled = false;
+
 }
 
 function checkAnswer(playerChoiceIsScam) {
   if (!currentEmail) return;
-  const correct = currentEmail.isScam === playerChoiceIsScam;
 
-  feedbackEl.textContent = correct ? "✅ Correct!" : "❌ Incorrect!";
+  // Disable both buttons so no reselection
+  document.getElementById('safeBtn').disabled = true;
+  document.getElementById('scamBtn').disabled = true;
+
+  const correct = currentEmail.isScam === playerChoiceIsScam;
+  feedbackEl.innerHTML = correct ? "✅ <span>Correct!</span>" : "❌ <span>Incorrect!</span>";
   feedbackEl.style.color = correct ? "green" : "red";
 
-  // Show the reason from the email object
   if (currentEmail.reason) {
     reasonEl.textContent = currentEmail.reason;
   } else {
@@ -245,6 +252,7 @@ function checkAnswer(playerChoiceIsScam) {
   scoreValueEl.textContent = score;
   filteredEmails = filteredEmails.filter(e => e !== currentEmail);
   renderInbox();
+
   if (filteredEmails.length === 0) {
     endLevel();
   }
