@@ -42,8 +42,8 @@ body, html {
   position: absolute;
 
   /* Center first */
-  top: 50%;
-  left: 50%;
+  top: 37.8%;
+  left: 48.7%;
 
   /* Nudge to perfectly overlay the monitor’s white screen */
   transform: translate(calc(-50% - 10px), calc(-50% - 20px));
