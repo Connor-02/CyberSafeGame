@@ -49,8 +49,8 @@ body, html {
   transform: translate(calc(-50% - 10px), calc(-50% - 20px));
 
   /* Sizing to fit the visible monitor screen */
-  width: 880px;
-  height: 500px;
+  width: 1372px;
+  height: 770px;
 
   background: #f0f0f0;
   border-radius: 8px 8px 0 0;
