@@ -146,7 +146,14 @@ ul#emailList {
   margin-top: 4px;
 }
 
-.email-preview { color: #80deea; font-size: 13px; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.email-preview { 
+  color: #ffffff; 
+  font-size: 13px; 
+  margin-top: 4px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
 
 #actions button {
   padding: 8px 14px;
