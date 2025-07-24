@@ -194,7 +194,7 @@ ul#emailList {
 #feedback {
   display: flex;              /* use flexbox for alignment */
   justify-content: center;    /* center horizontally */
-  align-items: center;        /* vertically align icon + text */
+  align-items: left;        /* vertically align icon + text */
   gap: 8px;                   /* spacing between icon and text */
   margin-top: 10px;
   font-size: 18px;
